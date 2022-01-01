@@ -1,0 +1,29 @@
+RewriteEngine On
+
+ErrorDocument 404 /ErrorDocument/404.php
+
+RewriteRule ^home/$ /index.php [L]
+RewriteRule ^login/$ /public/DangNhap.php [L]
+RewriteRule ^register/$ /public/DangKy.php [L]
+RewriteRule ^register/([A-Za-z0-9-]+) /public/DangKy.php?ref=$1 [L]
+
+RewriteRule ^forgot-password/$ /public/QuenMatKhau.php [L]
+RewriteRule ^reset-password/([A-Za-z0-9-]+) /public/ResetPassword.php?token=$1 [L]
+RewriteRule ^log-out/$ /dang-xuat.php [L]
+RewriteRule ^pay/card/$ /public/NapCard.php [L]
+RewriteRule ^pay/momo/$ /public/NapMomo.php [L]
+RewriteRule ^pay/bank/$ /public/NapBank.php [L]
+RewriteRule ^profile/$ /public/Profile.php [L]
+RewriteRule ^history/orders/$ /public/DanhSachDonHang.php [L]
+RewriteRule ^order/view/([A-Za-z0-9-]+) /public/XemDonHang.php?id=$1 [L]
+RewriteRule ^tools/check-live-clone/$ /public/CheckLiveClone.php [L]
+RewriteRule ^support/$ /public/DanhSachHoTro.php [L]
+RewriteRule ^support/([A-Za-z0-9-]+) /public/XemHoTro.php?id=$1 [L]
+RewriteRule ^download/([A-Za-z0-9-]+) /file/DownloadFile.php?token=$1 [L]
+RewriteRule ^giftcode/$ /public/Giftcode.php [L]
+RewriteRule ^shop/bm/$ /public/ShopBM.php [L]
+RewriteRule ^shop/clone/$ /public/ShopCLONE.php [L]
+RewriteRule ^shop/via/$ /public/ShopVIA.php [L]
+RewriteRule ^AjaxMuaClone$ /model/Buy.php [L]
+RewriteRule ^api/get_buy/$ /api/apigetbuy.php [L]
+RewriteRule ^affiliate-manager/$ /public/CongTacVien.php [L]
